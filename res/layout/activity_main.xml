@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/rlTipApp"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#00FF00"
+	tools:context=".MainActivity" >
+
+<!-- 
+    <EditText
+        android:id="@+id/etBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="@string/etBillAmount"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal" />
+ -->
+	
+	<Button
+		android:id="@+id/btn10pc"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/etBillAmount"
+		android:layout_below="@+id/etBillAmount"
+		android:layout_marginTop="16dp"
+		android:onClick="onClick10pc"
+		android:text="@string/btn10pc" />
+	
+    <Button
+    	android:id="@+id/btn15pc"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignBaseline="@+id/btn10pc"
+    	android:layout_alignBottom="@+id/btn10pc"
+    	android:layout_centerHorizontal="true"
+    	android:onClick="onClick15pc"
+    	android:text="@string/btn15pc" />
+    
+    <Button
+    	android:id="@+id/btn20pc"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_above="@+id/etCustomTipPercentage"
+    	android:layout_alignRight="@+id/etBillAmount"
+    	android:onClick="onClick20pc"
+    	android:text="@string/btn20pc" />
+
+    <Button
+    	android:id="@+id/btnLoadTipRate"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_above="@+id/etSplit"
+    	android:layout_toRightOf="@+id/btn15pc"
+    	android:onClick="onClickLoadTip"
+    	android:text="@string/btnLoadTipRate" />
+
+    <EditText
+    	android:id="@+id/etBillAmount"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentTop="true"
+    	android:layout_centerHorizontal="true"
+    	android:layout_marginTop="18dp"
+    	android:ems="10"
+    	android:hint="@string/etBillAmount"
+    	android:inputType="numberDecimal" />
+
+    <EditText
+    	android:id="@+id/etSplit"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignLeft="@+id/etCustomTipPercentage"
+    	android:layout_below="@+id/btnSaveTipRate"
+    	android:layout_marginTop="15dp"
+    	android:ems="10"
+    	android:hint="@string/etSplit"
+    	android:inputType="numberDecimal" />
+
+    <SeekBar
+    	android:id="@+id/sbCustomTipPercentage"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_alignLeft="@+id/btnSaveTipRate"
+    	android:layout_centerVertical="true" />
+
+    <EditText
+    	android:id="@+id/etCustomTipPercentage"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignLeft="@+id/btn10pc"
+    	android:layout_below="@+id/btn10pc"
+    	android:layout_marginTop="22dp"
+    	android:ems="10"
+    	android:hint="@string/etCustomTipPercentage"
+    	android:inputType="numberDecimal" />
+
+    <Button
+    	android:id="@+id/btnSaveTipRate"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/sbCustomTipPercentage"
+    	android:layout_marginTop="33dp"
+    	android:layout_toLeftOf="@+id/btn15pc"
+    	android:onClick="onClickSaveTip"
+    	android:text="@string/btnSaveTipRate" />
+
+    <TextView
+    	android:id="@+id/tvTipResult"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignBaseline="@+id/tvTipLabel"
+    	android:layout_alignBottom="@+id/tvTipLabel"
+    	android:layout_alignLeft="@+id/btn15pc"
+    	android:layout_marginLeft="46dp"
+    	android:hint="@string/tvTipResult"
+    	android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+    	android:id="@+id/tvTipLabel"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignLeft="@+id/etSplit"
+    	android:layout_below="@+id/etSplit"
+    	android:layout_marginLeft="23dp"
+    	android:layout_marginTop="22dp"
+    	android:text="@string/tvTipLabel"
+    	android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
