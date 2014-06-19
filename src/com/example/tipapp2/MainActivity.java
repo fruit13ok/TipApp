@@ -1,5 +1,5 @@
 package com.example.tipapp2;
-
+//this project need a auto gen project call appcompat_v7
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
